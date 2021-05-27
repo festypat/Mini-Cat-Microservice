@@ -35,34 +35,6 @@ namespace TestApp
                 throw;
             }
 
-
-            //using (var client = new HttpClient())
-            //{
-            //    client.BaseAddress = new Uri("https://sbdevzone.sterling.ng/CreditSwitchApi");
-
-               
-
-            //    var postTask = await client.PostAsync<Credit>("student", model);
-            //    postTask.Wait();
-
-            //    var result = postTask.Result;
-            //    if (result.IsSuccessStatusCode)
-            //    {
-
-            //    }
-
-            //        //HTTP GET
-                 
-
-            //    var request = JsonConvert.SerializeObject(model);
-
-            //    var responseTask = await client.PostAsync("/api/CreditSwitch/GetDataPlans", 
-            //        new StringContent(request, Encoding.UTF8, "application/json"));
-            //   // responseTask.Wait();
-
-            //   // var result = await responseTask.Content.ReadAsStringAsync();
-                
-            //}
             Console.ReadLine();
         }
 
