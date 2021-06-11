@@ -17,6 +17,13 @@ namespace TestApp
                 SessionID = "000001042720210325585421140186"
             };
 
+            string data = null;
+
+            if(string.IsNullOrEmpty(data))
+            {
+                string resps = "Valid data";
+            }
+
             try
             {
                 using (var httpClient = new HttpClient())
