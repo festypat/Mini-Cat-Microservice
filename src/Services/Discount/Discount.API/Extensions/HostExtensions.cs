@@ -3,10 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Discount.API.Extensions
 {
@@ -28,6 +24,7 @@ namespace Discount.API.Extensions
 
                     using var connection = new NpgsqlConnection
                         (configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
+
                     connection.Open();
 
                     using var command = new NpgsqlCommand
@@ -50,6 +47,8 @@ namespace Discount.API.Extensions
                     command.CommandText = "INSERT INTO coupon(Productname, Description, Amount) VALUES('Lg', 'Latest Iphone', 482)";
                     command.ExecuteNonQuery();
 
+                    command.CommandText = "INSERT INTO coupon(Productname, Description, Amount) VALUES('yoga', 'Latest yoga laptopn', 937)";
+                    command.ExecuteNonQuery();
 
                 }
                 catch (NpgsqlException ex)
